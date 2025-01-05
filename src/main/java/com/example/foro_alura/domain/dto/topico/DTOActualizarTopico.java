@@ -1,4 +1,4 @@
-package com.example.foro_alura.domain.topico;
+package com.example.foro_alura.domain.dto.topico;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonFormat;

@@ -1,7 +1,9 @@
-package com.example.foro_alura.domain.topico;
+package com.example.foro_alura.domain.entity.topico;
 
 
-import com.example.foro_alura.domain.usuario.Usuario;
+import com.example.foro_alura.domain.dto.topico.DTOActualizarTopico;
+import com.example.foro_alura.domain.dto.topico.DTORegistrarTopico;
+import com.example.foro_alura.domain.entity.usuario.Usuario;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;

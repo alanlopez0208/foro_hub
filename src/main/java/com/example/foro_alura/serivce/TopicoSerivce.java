@@ -1,11 +1,12 @@
 package com.example.foro_alura.serivce;
 
-import com.example.foro_alura.domain.topico.*;
-import com.example.foro_alura.domain.usuario.Usuario;
-import com.example.foro_alura.domain.usuario.UsuarioRepository;
-import com.example.foro_alura.infra.exception.NotFoundException;
+import com.example.foro_alura.domain.dto.topico.DTOActualizarTopico;
+import com.example.foro_alura.domain.dto.topico.DTORegistrarTopico;
+import com.example.foro_alura.domain.dto.topico.DTOTopico;
+import com.example.foro_alura.domain.entity.topico.Topico;
+import com.example.foro_alura.domain.entity.topico.TopicoRepository;
+import com.example.foro_alura.domain.entity.usuario.UsuarioRepository;
 import jakarta.persistence.EntityNotFoundException;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,8 +15,6 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.function.Consumer;
-import java.util.function.Supplier;
 
 @Service
 public class TopicoSerivce {

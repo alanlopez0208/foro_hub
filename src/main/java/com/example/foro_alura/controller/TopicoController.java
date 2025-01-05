@@ -1,11 +1,14 @@
 package com.example.foro_alura.controller;
 
 
-import com.example.foro_alura.domain.topico.DTOActualizarTopico;
-import com.example.foro_alura.domain.topico.DTORegistrarTopico;
-import com.example.foro_alura.domain.topico.DTOTopico;
-import com.example.foro_alura.domain.topico.Topico;
+import com.example.foro_alura.domain.dto.topico.DTOActualizarTopico;
+import com.example.foro_alura.domain.dto.topico.DTORegistrarTopico;
+import com.example.foro_alura.domain.dto.topico.DTOTopico;
+import com.example.foro_alura.domain.entity.topico.Topico;
+import com.example.foro_alura.domain.entity.usuario.Usuario;
 import com.example.foro_alura.serivce.TopicoSerivce;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -20,10 +23,10 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @RestController
 @RequestMapping("/topico")
+@SecurityRequirement(name = "bearer-key")
 public class TopicoController {
     private TopicoSerivce topicoSerivce;
 
@@ -44,6 +47,8 @@ public class TopicoController {
                 .path("/topico/{id}")
                 .buildAndExpand(topico.getId())
                 .toUri();
+
+
         return ResponseEntity
                 .created(uri)
                 .build();

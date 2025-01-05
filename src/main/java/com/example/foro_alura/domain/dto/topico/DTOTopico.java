@@ -1,9 +1,9 @@
-package com.example.foro_alura.domain.topico;
+package com.example.foro_alura.domain.dto.topico;
 
-import com.example.foro_alura.domain.usuario.DTOUsuario;
+import com.example.foro_alura.domain.entity.topico.Topico;
+import com.example.foro_alura.domain.dto.usuario.DTOUsuario;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public record DTOTopico(

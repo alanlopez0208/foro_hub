@@ -1,4 +1,4 @@
-package com.example.foro_alura.domain.topico;
+package com.example.foro_alura.domain.dto.topico;
 
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotBlank;
