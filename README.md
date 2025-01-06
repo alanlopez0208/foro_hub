@@ -21,7 +21,3 @@ Esta API REST proporciona las siguientes funcionalidades:
 
 * **Autenticación:**  La API utiliza JWT para autenticar a los usuarios.  Un endpoint de autenticación (ej: `/auth`) permite obtener un token JWT al proporcionar credenciales válidas.
 
-## Instrucciones de Ejecución
-
-1. **Clonar el repositorio:**  `git clone [URL del repositorio]`
-4. **Probar la API:**  Utilizar Insomnia para probar los endpoints de la API.
